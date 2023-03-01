@@ -32,3 +32,34 @@ function returnSomething(){
 const  returnSomething2 = () => "something"
 console.log(typeof returnSomething2)
 console.log(typeof globalScope)
+
+//Arrow function
+carArray = [];
+carModels = ["porsche","volvo","tofaş"];
+
+carModels.forEach((value,index) => {
+    const carObject = {
+        model: value,
+        index: index
+    }
+    carArray.push(carObject)
+});
+console.log(carArray)
+
+const carModel = carModels.map((value,index) => {
+    return {
+        model: value,
+        index: index
+    }
+})  
+console.log(carModel)
+
+const HasInSaleCars = [
+    {model: "porsche", inSale: true},
+    {model: "volvo", inSale: false},
+    {model: "tofaş", inSale: true}
+]
+
+const inSaleCars = HasInSaleCars.filter((value) => value.inSale)
+console.log(inSaleCars)
+
