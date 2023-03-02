@@ -15,4 +15,8 @@ git checkout -b try/b1
 
 git branch -d try/b1
 
-// branch silme
+// branch silme,
+
+git reset --hard
+
+// değişiklikleri silme
