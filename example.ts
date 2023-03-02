@@ -54,6 +54,9 @@ const java: Cat = {
     name: "Java",
     type: "Cat",
     age: 3,
+    speak: function (): void {
+        throw new Error("Function not implemented.");
+    }
 }
 
 const createCatUser = (cat: {name: string, type: string, age:number}): string => {
