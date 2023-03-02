@@ -1,0 +1,18 @@
+git checkout try/b1 
+// branch değiştirme
+
+git checkout 42a26e196
+
+// eski commite dön
+
+git checkout master
+
+// master branchına dön
+
+git checkout -b try/b1
+
+// yeni branch oluşturup ona geçiş yap
+
+git branch -d try/b1
+
+// branch silme
