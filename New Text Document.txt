@@ -20,3 +20,23 @@ git branch -d try/b1
 git reset --hard
 
 // değişiklikleri silme
+
+git stash   
+
+// değişiklikleri saklama
+
+git stash pop
+
+// saklanan değişiklikleri geri al
+
+git stash list
+
+// saklanan değişiklikleri listele
+
+git stash apply
+
+// saklanan değişiklikleri geri al
+
+git stash drop
+
+// saklanan değişiklikleri sil
