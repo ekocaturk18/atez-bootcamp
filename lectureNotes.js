@@ -82,3 +82,19 @@ console.log(newCarObject)
 
 const [x,y,...rest] = [1,2,3,4,5,6,7,8,9,10]
 console.log(x,y,rest)
+
+
+const modelspec = {
+    age : 23,
+}
+
+// eğer modelspec içerisinde speedInterval varsa forEach içerisindeki fonksiyonu çalıştır
+console.log("Model", modelspec?.speedInterval?.forEach(x => console.log(x)))
+
+// ternary operator
+const age = 23
+const isAdult = age > 18 ? true : false 
+console.log(isAdult)
+
+
+
