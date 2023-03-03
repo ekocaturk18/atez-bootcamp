@@ -1,4 +1,4 @@
-const dummyData = [
+var dummyData = [
     {
         id: 1,
         title: "iPhone 8",
@@ -269,7 +269,7 @@ const dummyData = [
         stock: 12,
         brand: "Apple",
         celluar: false,
-        wifi:true,
+        wifi: true,
         color: 'blue',
         category: "tablet",
         thumbnail: "https://i.dummyjson.com/data/products/1/thumbnail.jpg",
@@ -291,7 +291,7 @@ const dummyData = [
         stock: 12,
         brand: "HP",
         celluar: true,
-        wifi:false,
+        wifi: false,
         color: 'black',
         category: "tablet",
         thumbnail: "https://i.dummyjson.com/data/products/1/thumbnail.jpg",
@@ -304,75 +304,27 @@ const dummyData = [
         ]
     }
 ];
-
-
-interface IProduct {
-    title: string;
-    description: string,
-    price: number;
-    rating: number;
-    id: number | string;
-    thumbnail: string
-    category: string;
-}
-
-
-
-interface ISmartPhone extends IProduct {
-    color: string;
-}
-
-interface ILaptop extends  IProduct {
-    discountPercentage: number,
-    screenDimentions: number,
-}
-
-interface ITablet extends ISmartPhone {
-    cellular: boolean;
-    wifi: boolean;
-}
-
-interface ITelevision extends IProduct {
-    smartTv:boolean;
-    stock: number;
-}
-
-
-interface IProductApi {
-    findAll: () => IProduct[];
-    findByCategory<T extends IProduct>(category: string): T[];
-
-    findByText: (input:string) => void;
-}
-
-class ProductApi implements IProductApi {
-    findAll (): IProduct[] {
-        return dummyData as IProduct[];
+var ProductApi = /** @class */ (function () {
+    function ProductApi() {
     }
-
-    findByCategory<T extends IProduct>(category: string): T[] {
-        const products = this.findAll();
-        return products.filter((item: IProduct) => item.category === category) as T[];
-    }
-
+    ProductApi.prototype.findAll = function () {
+        return dummyData;
+    };
+    ProductApi.prototype.findByCategory = function (category) {
+        var products = this.findAll();
+        return products.filter(function (item) { return item.category === category; });
+    };
     // findByCategory <T extends IProduct> (IProduct: T): IProduct<T> Deniz Can Tufekci ---
-
-    findByText(input: string) {
-        const products = this.findAll();
-        return products.filter((item: IProduct) => item.title.search(input));
-    }
-}
-
-const productApi = new ProductApi();
-
-const products = productApi.findAll();  
-
-const smartPhones = productApi.findByCategory<ISmartPhone>('smartphone');
-const laptops = productApi.findByCategory<ILaptop>('laptop');
-const tablets = productApi.findByCategory<ITablet>('tablet');
-const televisions = productApi.findByCategory<ITelevision>('television');
-
-const searchResult = productApi.findByText('apple');
-
-
-
+    ProductApi.prototype.findByText = function (input) {
+        var products = this.findAll();
+        return products.filter(function (item) { return item.title.search(input); });
+    };
+    return ProductApi;
+}());
+var productApi = new ProductApi();
+var products = productApi.findAll();
+var smartPhones = productApi.findByCategory('smartphone');
+var laptops = productApi.findByCategory('laptop');
+var tablets = productApi.findByCategory('tablet');
+var televisions = productApi.findByCategory('television');
+var searchResult = productApi.findByText('apple');
