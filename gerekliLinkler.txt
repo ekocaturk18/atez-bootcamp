@@ -17,3 +17,5 @@ https://docs.spring.io/spring-boot/docs/current/maven-plugin/reference/htmlsingl
 https://stackoverflow.com/questions/65212231/cloud-native-buildpacks-paketo-with-java-spring-boot-how-to-configure-different
 
 https://github.com/spring-projects/spring-boot/issues/23518
+
+https://www.graalvm.org/latest/reference-manual/native-image/guides/configure-with-tracing-agent/
