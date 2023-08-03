@@ -19,3 +19,5 @@ https://stackoverflow.com/questions/65212231/cloud-native-buildpacks-paketo-with
 https://github.com/spring-projects/spring-boot/issues/23518
 
 https://www.graalvm.org/latest/reference-manual/native-image/guides/configure-with-tracing-agent/
+
+https://medium.com/graalvm/enhancing-3rd-party-library-support-in-graalvm-native-image-with-shared-metadata-9eeae1651da4
